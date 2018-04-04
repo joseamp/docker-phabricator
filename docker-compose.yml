@@ -5,11 +5,20 @@
 #  - /var/repo - code repos
 #
 #
-phabricator:
-    build: .
-    links: ['database']
-    ports: ['8081:80']
+#
+version "3.1"
 
+services:
+        phabricator:
+                image: joseamartinez/phabLab:1.0
+                networks:
+                        - phabNetwork
+                ports:
+                        - "8081:80"
+                links:
+                        database
 
-database:
-    build: database/
+        database:
+                image: joseamartinez/phabDB:1.0
+                networks:
+                        - phabNetwork
