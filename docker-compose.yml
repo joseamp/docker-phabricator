@@ -22,3 +22,6 @@ services:
                 image: yesnault/docker-phabricator-mysql:latest
                 networks:
                         - phabNetwork
+networks:
+ phabNetwork:
+  name: phabNetwork
