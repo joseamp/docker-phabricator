@@ -6,11 +6,11 @@
 #
 #
 #
-version "3.1"
+version: "3.1"
 
 services:
         phabricator:
-                image: joseamartinez/phabLab:1.0
+                image: yesnault/docker-phabricator:latest
                 networks:
                         - phabNetwork
                 ports:
@@ -19,6 +19,6 @@ services:
                         database
 
         database:
-                image: joseamartinez/phabDB:1.0
+                image: yesnault/docker-phabricator-mysql:latest
                 networks:
                         - phabNetwork
