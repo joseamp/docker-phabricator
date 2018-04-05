@@ -16,7 +16,7 @@ services:
                 ports:
                         - "8081:80"
                 links:
-                        database
+                        - database
 
         database:
                 image: yesnault/docker-phabricator-mysql:latest
