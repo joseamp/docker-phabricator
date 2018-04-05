@@ -23,5 +23,4 @@ services:
                 networks:
                         - phabNetwork
 networks:
- phabNetwork:
-  name: phabNetwork
+ phabNetwork
